@@ -148,13 +148,13 @@ try:
     repositorio = validar_repositorio(campos[5])
     valor_hash = validar_hash(campos[6])
 
-    ip_correto = verificar_ip(campos[2])
-    senha_correta = verificar_senha(campos[1])
     id_correto = verificar_id(campos[0])
+    senha_correta = verificar_senha(campos[1])
+    ip_correto = verificar_ip(campos[2])
     transacao_correta = verificar_transacao(campos[4])
 
-    if id_user and senha and ip and email and transacao and repositorio and valor_hash and ip_correto \
-            and senha_correta and id_correto and transacao_correta:
+    if id_user and senha and ip and email and transacao and repositorio and valor_hash and id_correto and \
+            senha_correta and ip_correto and transacao_correta:
         print(True)
     else:
         print(False)
