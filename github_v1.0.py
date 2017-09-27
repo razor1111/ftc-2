@@ -128,7 +128,7 @@ def verificar_id(campo):
 
 
 def verificar_transacao(campo):
-    permitidos = ['pull', 'push', 'stash', 'fork', 'pop']
+    permitidos = ['pull','push','stash','fork','pop']
     for transacao in permitidos:
         if campo == transacao:
             return True
