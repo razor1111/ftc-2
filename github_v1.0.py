@@ -24,6 +24,7 @@ def validar_ip(campo):
     except:
         return False
 
+
 def validar_email(campo):
     try:
         teste = re.match(r'^[a-zA-z][\w\.\-_]*@\w+\.([\w.]+)*$', campo)
@@ -60,7 +61,7 @@ def verificar_ip(campo):
     list_ip = []
     for simb in campo:
         if simb == '.':
-            campo = campo.replace(simb,' ')
+            campo = campo.replace(simb, ' ')
     campo = campo.split()
     for simb in campo:
         num = int(simb)
@@ -83,7 +84,7 @@ def verificar_senha(campo):
 
 
 def char_adjacente(campo):
-    point1_1 =re.search(r'^[A-Fa-f]$',campo[0])
+    point1_1 = re.search(r'^[A-Fa-f]$', campo[0])
     point1_2 = re.search(r'^[A-Fa-f]$', campo[1])
 
     point2_1 = re.search(r'^[A-Fa-f]$', campo[2])
@@ -127,7 +128,7 @@ def verificar_id(campo):
 
 
 def verificar_transacao(campo):
-    permitidos = ['pull','push','stash','fork','pop']
+    permitidos = ['pull', 'push', 'stash', 'fork', 'pop']
     for transacao in permitidos:
         if campo == transacao:
             return True
@@ -160,4 +161,3 @@ try:
 
 except:
     print(False)
-
